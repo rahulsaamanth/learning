@@ -47,4 +47,7 @@ func main() {
 	fmt.Println(nextInt())
 	nextInts := intSeq()
 	fmt.Println(nextInts())
+
+	fmt.Println("------------- recursion -------------")
+	fmt.Println(fact(5))
 }
