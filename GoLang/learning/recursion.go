@@ -7,3 +7,4 @@ func fact(n int ) int {
 
 	return n * fact(n-1)
 }
+
