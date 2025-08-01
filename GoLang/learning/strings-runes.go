@@ -34,9 +34,11 @@ func strings_runes() {
 }
 
 func examineRune(r rune) {
-	if r == 't' {
+	switch r {
+	case 't':
 		fmt.Println("found tee")
-	} else if r == 'ส' {
+
+	case 'ส':
 		fmt.Println("found so sua")
 	}
 }

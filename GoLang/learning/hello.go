@@ -68,4 +68,13 @@ func main() {
 
 	fmt.Println("------------- Strings and Runes -------------")
 	strings_runes()
+
+	fmt.Println("------------- Structs -------------")
+	structs()
+
+	fmt.Println("------------- Methods -------------")
+	methods()
+
+	fmt.Println("------------- Interfaces -------------")
+	_interfaces()
 }
