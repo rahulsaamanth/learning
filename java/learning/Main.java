@@ -2,7 +2,6 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-
 public class Main {
     public static void main(String[] args) {
 
@@ -14,7 +13,8 @@ public class Main {
 
         HashMap<String, Integer> map = new HashMap<>();
 
-        map.put("rahulsaamanth", null);
+        map.put("rahulsaamanth", null
+        );
         map.put("Jithendra", 10);
 
         System.out.println(map);
