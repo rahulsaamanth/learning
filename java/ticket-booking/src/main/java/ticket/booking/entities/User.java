@@ -10,4 +10,15 @@ public class User {
 
     private List<Ticket> ticketsBooked;
 
+    public String getName() {
+        return name;
+    }
+
+    public String getPassword() {
+        return password;
+    }
+
+    public String getHashedPassword() {
+        return hashedPassword;
+    }
 }
