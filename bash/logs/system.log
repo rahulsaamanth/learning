@@ -1,0 +1,11 @@
+Aug 21 08:00:01 hostname kernel: Linux version 5.15.0-78-generic (buildd@lcy02-amd64-041) (gcc (Ubuntu 11.3.0-1ubuntu1~22.04.1) 11.3.0, GNU ld (GNU Binutils for Ubuntu) 2.38) #85-Ubuntu SMP Mon Jul 17 08:29:15 UTC 2023
+Aug 21 08:00:05 hostname systemd[1]: Started Network Manager.
+Aug 21 08:00:10 hostname CRON[1234]: (root) CMD (command -v apt-xapian-index-update-helper >/dev/null && apt-xapian-index-update-helper --quiet >/dev/null || true)
+Aug 21 08:00:15 hostname sshd[5678]: Accepted publickey for user from 192.168.1.200 port 54321 ssh2: RSA SHA256:abcdef123456...
+Aug 21 08:00:20 hostname systemd[1]: Reached target Graphical Interface.
+Aug 21 08:01:00 hostname kernel: [drm:vmw_pvpg_bind_context [vmwgfx]] *ERROR* Failed to bind context 0x12345678
+Aug 21 08:01:30 hostname systemd[1]: Failed to start Apache HTTP Server.
+Aug 21 08:01:45 hostname rsyslogd: [origin software="rsyslogd" swVersion="8.2102.0" x-pid="789"] rsyslogd was HUPed
+Aug 21 08:02:10 hostname kernel: CPU1: Package temperature above threshold, cpu clock throttled (total events = 1)
+Aug 21 08:02:45 hostname systemd[1]: Started Snap Daemon.
+Aug 21 08:03:00 hostname sudo[9012]: user : TTY=pts/0 ; PWD=/home/user ; USER=root ; COMMAND=/usr/bin/apt update

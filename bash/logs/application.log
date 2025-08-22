@@ -1,0 +1,12 @@
+2025-08-21 08:00:05 INFO User 'john.doe' logged in from 192.168.1.100
+2025-08-21 08:00:15 DEBUG Processing request for /api/data?id=123
+2025-08-21 08:00:20 INFO Data retrieved successfully for ID 123
+2025-08-21 08:01:00 WARN Failed attempt to access /admin/settings by 'guest' from 192.168.1.50
+2025-08-21 08:01:30 ERROR Database connection failed: Connection refused. Retrying...
+2025-08-21 08:01:45 INFO Database reconnected successfully.
+2025-08-21 08:02:10 INFO User 'jane.smith' created new report 'SalesSummary'
+2025-08-21 08:02:45 DEBUG Sending email notification to admin@example.com
+2025-08-21 08:03:00 INFO Report 'SalesSummary' generated and sent.
+2025-08-21 08:03:15 WARN High CPU usage detected on server 'web-01'. Current usage: 92%
+2025-08-21 08:03:30 ERROR Unhandled exception in /api/report_generation: NullPointerException
+2025-08-21 08:03:45 INFO User 'john.doe' logged out.
