@@ -7,6 +7,7 @@ import ticket.booking.utils.UserServiceUtil;
 
 import java.io.File;
 import java.io.IOException;
+import java.util.Collections;
 import java.util.List;
 import java.util.Optional;
 
@@ -84,6 +85,16 @@ public class UserBookingService {
         } else {
             System.out.println("No ticket found with ID " + ticketId);
             return false;
+        }
+    }
+
+    public List<Train> getTrains(String source, String destination) throws IOException {
+        try {
+            TrainService trainService = new TrainService();
+            return trainService.searchTrains(source, destination);
+        } catch (Exception ex) {
+            System.out.println("There is something wrong!");
+            return Collections.emptyList();
         }
     }
 

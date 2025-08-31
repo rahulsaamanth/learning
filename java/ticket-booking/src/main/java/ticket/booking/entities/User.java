@@ -1,14 +1,31 @@
 package ticket.booking.entities;
 
+import java.util.Collections;
 import java.util.List;
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class User {
+    @JsonProperty("name")
     private String username;
     private String password;
+    @JsonProperty("hashed_password")
     private String hashedPassword;
+    @JsonProperty("user_id")
     private String userId;
 
+    @JsonProperty("tickets_booked")
     private List<Ticket> ticketsBooked;
+
+    public User() {
+    }
+
+    public User(String username, String password, String hashedPassword, List<Ticket> ticketsBooked, String userId) {
+        this.username = username;
+        this.userId = userId;
+        this.password = password;
+        this.hashedPassword = hashedPassword;
+        this.ticketsBooked = ticketsBooked != null ? ticketsBooked : Collections.emptyList();
+    }
 
     public String getUsername() {
         return username;

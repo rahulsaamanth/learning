@@ -25,4 +25,22 @@ func (ss ServerState) String() string {
 
 func _enums(){
 	ns := transition(StateIdle);
+	fmt.Println(ns)
+
+	ns2 := transition(ns)
+	fmt.Println(ns2)
+}
+
+
+func transition(s ServerState) ServerState {
+	switch s{
+	case StteIdle:
+		return StateConnected
+	case StateConnected, StateRetrying:
+		return StateIdle
+	case StateError:
+		return StateError
+	default:
+		panic(fmt.Errorf("unknown state: %s", s))
+	}
 }

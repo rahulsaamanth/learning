@@ -1,9 +1,14 @@
 plugins {
     id 'java'
+    id 'application'
 }
 
 group = 'ticket.booking'
 version = '1.0-SNAPSHOT'
+
+application {
+    mainClass = 'ticket.booking.App'
+}
 
 repositories {
     mavenCentral()
@@ -18,4 +23,8 @@ dependencies {
 
 test {
     useJUnitPlatform()
+}
+
+run {
+    standardInput = System.in
 }

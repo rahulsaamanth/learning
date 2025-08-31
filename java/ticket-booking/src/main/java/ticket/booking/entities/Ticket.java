@@ -1,14 +1,20 @@
 package ticket.booking.entities;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 // import java.util.Date;
 
+@JsonIgnoreProperties(ignoreUnknown = true)
 public class Ticket {
 
+    @JsonProperty("ticket_id")
     private String ticketId;
+    @JsonProperty("user_id")
     private String userId;
     private String source;
     private String destination;
 
+    @JsonProperty("date_of_travel")
     private String dateOfTravel;
 
     private Train train;
