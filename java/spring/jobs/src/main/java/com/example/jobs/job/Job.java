@@ -1,14 +1,14 @@
 package com.example.jobs.job;
 
 public class Job {
-    private long id;
+    private Long id;
     private String title;
     private String description;
     private String minSalary;
     private String maxSalary;
     private String location;
 
-    public Job(long id, String title, String description, String minSalary, String maxSalary, String location) {
+    public Job(Long id, String title, String description, String minSalary, String maxSalary, String location) {
         this.id = id;
         this.title = title;
         this.description = description;
@@ -17,11 +17,11 @@ public class Job {
         this.location = location;
     }
 
-    public long getId() {
+    public Long getId() {
         return id;
     }
 
-    public void setId(long id) {
+    public void setId(Long id) {
         this.id = id;
     }
 
