@@ -24,6 +24,11 @@ public class CompanyServcieImpl implements CompanyService {
     }
 
     @Override
+    public Company getCompanyById(Long id) {
+        return companyRepository.findById(id).orElse(null);
+    }
+
+    @Override
     public void createCompany(Company company) {
         companyRepository.save(company);
     }
@@ -42,5 +47,15 @@ public class CompanyServcieImpl implements CompanyService {
             return true;
         }
         return false;
+    }
+
+    @Override
+    public boolean deleteCompany(Long id) {
+        try {
+            companyRepository.deleteById(id);
+            return true;
+        } catch (Exception ex) {
+            return false;
+        }
     }
 }

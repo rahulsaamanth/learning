@@ -3,6 +3,7 @@ package com.example.jobs.company;
 import java.util.List;
 
 import com.example.jobs.job.Job;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -27,7 +28,8 @@ public class Company {
         this.description = description;
     }
 
-    @OneToMany
+    @JsonIgnore
+    @OneToMany(mappedBy = "company")
     private List<Job> jobs;
 
     public Long getId() {
