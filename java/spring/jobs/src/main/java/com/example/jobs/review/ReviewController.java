@@ -4,9 +4,11 @@ import java.util.List;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -36,5 +38,23 @@ public class ReviewController {
     @GetMapping("/reviews/{reviewId}")
     public ResponseEntity<Review> getReview(@PathVariable Long companyId, @PathVariable Long reviewId) {
         return new ResponseEntity<>(reviewService.getReview(companyId, companyId), HttpStatus.OK);
+    }
+
+    @PutMapping("/reviews/{reviewId}")
+    public ResponseEntity<String> updateReview(@PathVariable Long companyId, @PathVariable Long reviewId,
+            @RequestBody Review review) {
+
+        boolean isReviewUpdated = reviewService.updateReview(companyId, reviewId, review);
+        if (isReviewUpdated)
+            return new ResponseEntity<>("Reivew updated successfully", HttpStatus.OK);
+        return new ResponseEntity<>("Review is not updated", HttpStatus.NOT_MODIFIED);
+    }
+
+    @DeleteMapping("/reviews/{reviewId}")
+    public ResponseEntity<String> deleteReview(@PathVariable Long companyId, @PathVariable Long reviewId) {
+        boolean isReviewDeleted = reviewService.deleteReview(companyId, reviewId);
+        if (isReviewDeleted)
+            return new ResponseEntity<>("Reivew deleted successfully", HttpStatus.OK);
+        return new ResponseEntity<>("Review is not deleted", HttpStatus.NOT_FOUND);
     }
 }
