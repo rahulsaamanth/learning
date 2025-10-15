@@ -4,10 +4,12 @@ import java.util.List;
 import java.util.Optional;
 
 import org.springframework.stereotype.Service;
+import org.springframework.web.client.RestTemplate;
 
 import com.example.jobs_ms.job.Job;
 import com.example.jobs_ms.job.JobRepository;
 import com.example.jobs_ms.job.JobService;
+import com.example.jobs_ms.job.external.Company;
 
 @Service
 public class JobServiceImpl implements JobService {
@@ -21,6 +23,9 @@ public class JobServiceImpl implements JobService {
 
     @Override
     public List<Job> findAll() {
+        RestTemplate restTemplate = new RestTemplate();
+        Company company = restTemplate.getForObject("http://localhost:8081/companies/1", Company.class);
+        System.out.println("Company:" + company.getName());
         return jobRepository.findAll();
     }
 

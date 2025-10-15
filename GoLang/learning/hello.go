@@ -77,4 +77,7 @@ func main() {
 
 	fmt.Println("------------- Interfaces -------------")
 	_interfaces()
+
+	fmt.Println("------------- enums -------------")
+	_enums()
 }

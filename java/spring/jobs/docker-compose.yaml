@@ -5,6 +5,7 @@ services:
     environment:
       POSTGRES_USER: rahul
       POSTGRES_PASSWORD: saamanth
+      POSTGRES_DB: jobs
       PGDATA: /data/postgres
     volumes:
       - postgres:/data/postgres
@@ -13,7 +14,7 @@ services:
     networks:
       - postgres
     restart: unless-stopped
-  pgamdin:
+  pgadmin:
     container_name: pgadmin_container
     image: dpage/pgadmin4
     environment:
